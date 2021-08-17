@@ -1,0 +1,14 @@
+{
+  "name": "videogame-api",
+  "version": "1.0.0",
+  "description": "Video game api for Claw Studios Bootcamp",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "author": "Claw Studios",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
