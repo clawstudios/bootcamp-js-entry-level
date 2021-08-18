@@ -8,3 +8,6 @@
  * pero si te encuentras bloqueado, no dudes en pedir ayuda.
  * 
  */
+ const prueba25 = () =>{
+    console.log('holaMundo')
+}
