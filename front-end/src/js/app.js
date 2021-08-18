@@ -11,3 +11,6 @@
  const prueba25 = () =>{
     console.log('holaMundo')
 }
+ const prueba25 = () =>{
+    console.log('holaMundo')
+}
