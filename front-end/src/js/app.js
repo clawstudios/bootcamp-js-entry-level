@@ -8,5 +8,3 @@
  * pero si te encuentras bloqueado, no dudes en pedir ayuda.
  *
  */
-
-let miVariable = "Tierra";
