@@ -58,3 +58,8 @@ let nextAvailable = () => {
       }
   }
 }
+console.log(countAvailable())
+
+console.log(isFullOfCapacity())
+
+console.log(nextAvailable())
