@@ -62,4 +62,7 @@ let nextAvailable = () => {
         }
     }
 }
-console.log (countAvailable())
+console.log (countAvailable());
+console.log (countAvailable());
+console.log (countAvailable());
+console.log (countAvailable());
