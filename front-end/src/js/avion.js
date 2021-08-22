@@ -13,7 +13,7 @@ let asientos = [
     //[false,false,false],
     //[false,false,false],
     // [false,false,false]
-    
+
 
     [true, true, true],
     [true, true, true],
@@ -62,3 +62,4 @@ let nextAvailable = () => {
         }
     }
 }
+console.log (countAvailable())
