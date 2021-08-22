@@ -61,4 +61,3 @@ let nextAvailable = () => {
         }
     }
 }
-console.log(document.getElementsByClassName('btn'));

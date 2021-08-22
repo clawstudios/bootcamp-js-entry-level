@@ -1,7 +1,20 @@
 .fila__asiento--libre{
-  background-color: rgba(0, 200, 0, 0.3);
+  background-color: rgba(10, 10, 10, 0.3);
+  color : white;
+padding: 30px;
+font-size: 25px;
 }
 
 .fila__asiento--ocupado{
-  background-color: rgba(200, 50, 0, 0.3);
+  background-color: rgba(221, 12, 117, 0.3);
+  color : blue;
+  padding: 30px;
+  font-size: 25px;
 }
+.d-flex {
+  background-color: rgba(19, 226, 226, 0.3);
+ }
+ .d-grid {
+  background-color: rgba(236, 240, 236, 0.3);
+ }
+ 
