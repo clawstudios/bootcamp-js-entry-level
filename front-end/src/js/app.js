@@ -9,3 +9,44 @@
  * 
  */
 //facundo arguello
+
+
+//EX1
+
+/*
+var edad = prompt("introduce tu edad")
+    if (edad >= 18)
+        alert("puedes manejar");
+    else{
+        alert("no puedes manejar")
+
+    }
+*/
+//EX2
+
+let asientos = [
+
+    [false,false,false],
+    [false,false,false],
+    [false,false,false],
+    [false,false,false]
+
+];
+
+//function nextAvailable{
+let filas = asientos.length;
+
+
+for( i=0; i<filas; i++){
+
+    console.log(asientos.length)
+
+//for( j=0; j<columnas; j++){
+
+
+}
+
+//}
+
+//}
+//
