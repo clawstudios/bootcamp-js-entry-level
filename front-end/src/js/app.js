@@ -8,41 +8,32 @@
  * pero si te encuentras bloqueado, no dudes en pedir ayuda.
  *
  */
- const maxSeats = 12;
+// Pensamiento para la siguiente funcion:
+// "Se debe contar cuantos asientos hay disponibles y cuantos ocupados."
+// - saber cuantos acientos hay (12 asientos)
+// - cuantos estan disponibles (true) 
+//   - recorrer todo los ascientos para saber si es true o false
+//   - si es true se reserva 
 
- let countReservados = 0;
- let reservas = [
-   [true,true,true],
-   [true,true,true],
-   [true,true,true],
-   [true,true,true],
- ];
- 
- function nextAvailable(){
-   let asiento = "no se encuentra ningún asiento libre";
- 
-   let rows = reservas.length;
-   outer_loop:
-   for(let i=0;i<rows;i++){
-    let columns = reservas[i].length;
-    for(let j=0;j<columns;j++){
- 
-      if(reservas[i][j]==true){
-        countReservados=countReservados+1;
-        reservas[i][j] = false;
-        asiento = 'reservado el asiento de la fila: ' + i + ' columna: ' + j;
-        break outer_loop;
+
+function countAvailable(){
+
+  let asiento_vacio = true
+  let ocupado = false
+
+  let fila = matriz.lenght; i=0;
+  for (i; i < fila; i++){
+    let columna = matriz[i].lenght; j=0;
+      for (j; j< columna; j++){
+    
+        if( [i][j] == true){
+          suma (asiento_vacio)
+        }else{ 
+          suma (ocupado)
+        }
       }
- 
     }
-   }
- 
-   return asiento;
- }
- 
- function countAvailable(){
-    return maxSeats-countReservados;
- }
- 
- function isFullOfCapacity(){
-   return maxSeats==countReservados;
+  }
+   
+  return (asiento_vacio);
+console.log(countAvailable)
