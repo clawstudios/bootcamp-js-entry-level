@@ -18,8 +18,12 @@
 
 function countAvailable(){
 
-  let asiento_vacio = true
-  let ocupado = false
+  let asiento_vacio= [
+    [true,true,true],
+    [true,true,true],
+    [true,true,true],
+    [true,true,true],
+  ];
 
   let fila = matriz.lenght; i=0;
   for (i; i < fila; i++){
