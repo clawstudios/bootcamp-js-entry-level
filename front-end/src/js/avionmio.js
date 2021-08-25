@@ -1,46 +1,51 @@
 const total_de_asientos= 12;
+let asiento_vacio= [
+  [true,true,true],
+  [true,true,true],
+  [true,true,true],
+  [true,true,true],
+];
 
 function countAvailable(){
-// true = asiento vacio
-
-  let asiento_vacio= [
-      [true,true,true],
-      [true,true,true],
-      [true,true,true],
-      [true,true,true],
-    ];
-
-    let fila = matriz.lenght; i=0;
-    for (i; i < fila; i++){
-      let columna = matriz[i].lenght; j=0;
-        for (j; j< columna; j++){
-    
-          if( [i][j] == true){
-            suma (asiento_vacio);
-             }else{ 
-              null;}
-          }   
-        }
-      
-    
-
-    return asiento_vacio;
+  let asiento = 0
+  for (let i = 0; i< asiento_vacio.length;i++){
+    let fila = asiento_vacio[i];
+    for (let j = 0; j< fila.length; j++){
+      let columna = fila [i];
+      if (asiento_vacio === true){
+        asiento = asiento ++
+      }
+    }
   }
-
+  return asiento;
+}
 
 function isFullOfCapacity(){
-  if (total_de_asientos - asiento_vacio === 12);
-      document.write("El avion esta completo");
+  let ocupados = (total_de_asientos- (countAvailable));
+  if (total_de_asientos - ocupados == 0){
+    window.alert ("completo");
+    return false}
+  else{
+    return true
   }
-  
 }
 
 function nextAvailable(){
-    let asiento = "ocupar reservado"
-      if (i; i = false and j; j=false);
-        window.alert("Este asiento esta oupado, seleccione el siguiente");
-      }else{
-        asiento = "reservado el asiento de la fila: " + i + "columna: " + j;
 
-  return asiento;
+  for (let i = 0; i< asiento_vacio.length;i++){
+    let fila = asiento_vacio[i];
+    for (let j = 0; j< fila.length; j++){
+      let columna = fila [i];
+      let butaca = [i[j]];
+      if (butaca === true){
+      butaca = "su asiento "+ i + j + "ha sido reservado"}
+      else{
+        butaca = butaca++
+      }
+    }  
+  }
 }
+
+console.log(countAvailable());
+console.log(isFullOfCapacity());
+console.log(nextAvailable());
