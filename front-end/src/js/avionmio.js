@@ -16,9 +16,9 @@ function countAvailable(){
         for (j; j< columna; j++){
     
           if( [i][j] == true){
-            suma (asiento_vacio)
+            suma (asiento_vacio);
              }else{ 
-              null}
+              null;}
           }   
         }
       }
@@ -38,7 +38,7 @@ function isFullOfCapacity(){
 function nextAvailable(){
   let asiento = "ocupar reservado"
   if (i; i = false and j; j=false);
-    window.alert("Este asiento esta oupado, seleccione el siguiente")
+    window.alert("Este asiento esta oupado, seleccione el siguiente");
   }{else
     asiento = "reservado el asiento de la fila: " + i + "columna: " + j;}
 
