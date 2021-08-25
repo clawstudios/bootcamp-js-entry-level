@@ -1,39 +1,41 @@
-const maxSeats = 12;
-
-let countReservados = 0;
-let reservas = [
-  [false,false,false],
-  [false,false,false],
-  [false,false,false],
-  [false,false,false],
+let reservados = 0;
+let asientos = [
+    [true, true,true]
+    [true, true,true]
+    [true, true,true]
+    [true, true,true]
 ];
 
+let cantidad = asientos.length;
+
 function nextAvailable(){
-  let asiento = "no se encuentra ningún asiento libre";
+    let estadoAsiento = "No se encuentran asientos disponibles";
+    outer_loop:
+    for(let i = 0; i < cantidad; i++){
+        let columnas = asientos[i].length
+        for(let j = 0; j < columnas ; j++){
 
-  let rows = reservas.length;
-  outer_loop:
-  for(let i=0;i<rows;i++){
-   let columns = reservas[i].length;
-   for(let j=0;j<columns;j++){
+            if(asientos[i][j]==true){
+                reservados = reservados + 1
+                asientos[i][j] = false;
+                estadoAsiento = 'Reserva el asiento de la fila: ' + i + 'columna: ' + j;
+                break outer_loop
+            }
 
-     if(reservas[i][j]==false){
-       countReservados=countReservados+1;
-       reservas[i][j] = true;
-       asiento = 'reservado el asiento de la fila: ' + i + ' columna: ' + j;
-       break outer_loop;
-     }
-
-   }
-  }
-
-  return asiento;
+        }
+    }
 }
+return estadoAsiento;
 
 function countAvailable(){
-  return maxSeats-countReservados;
+    return "Hay " + reservados + " asientos reservados";
+    return "Hay " + (cantidad - reservados) + " asientos libres"; 
 }
 
-function isFullOfCapacity(){
-  return maxSeats==countReservados;
+function fullOfCapacity(){
+    if(asientos == reservados){
+        let Alerta = "No hay asientos disponibles";
+        alert(Alerta);
+        throw new Error (Alerta);
+    }
 }

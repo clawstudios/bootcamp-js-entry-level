@@ -38,11 +38,11 @@
      }
  }
  
- return estadoAsiento
+ return estadoAsiento;
  
  function countAvailable(){
-     return "Hay " + reservados + " asientos reservados"
-     return "Hay " + (cantidad - reservados) + " asientos libres" 
+     return "Hay " + reservados + " asientos reservados";
+     return "Hay " + (cantidad - reservados) + " asientos libres"; 
  }
  
  function fullOfCapacity(){
