@@ -46,7 +46,7 @@ function countAvailable(){
 
 
 function isFullOfCapacity(){ 
-  if (total_de_asientos - asientos_vacios === 0);{
+  if (total_de_asientos - asientos_vacios === 12);{
       document.write("El avion esta completo");
   }
   
