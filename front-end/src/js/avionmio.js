@@ -1,14 +1,14 @@
-onst total_de_asientos= 12;
+const total_de_asientos= 12;
 
 function countAvailable(){
 // true = asiento vacio
 
   let asiento_vacio= [
-    [true,true,true],
-    [true,true,true],
-    [true,true,true],
-    [true,true,true],
-   ];
+      [true,true,true],
+      [true,true,true],
+      [true,true,true],
+      [true,true,true],
+    ];
 
     let fila = matriz.lenght; i=0;
     for (i; i < fila; i++){
@@ -21,26 +21,26 @@ function countAvailable(){
               null;}
           }   
         }
-      }
-    }
+      
+    
 
     return asiento_vacio;
   }
 
 
-function isFullOfCapacity(){ 
-  if (total_de_asientos - asientos_vacios === 12);{
+function isFullOfCapacity(){
+  if (total_de_asientos - asiento_vacio === 12);
       document.write("El avion esta completo");
   }
   
 }
 
 function nextAvailable(){
-  let asiento = "ocupar reservado"
-  if (i; i = false and j; j=false);
-    window.alert("Este asiento esta oupado, seleccione el siguiente");
-  }{else
-    asiento = "reservado el asiento de la fila: " + i + "columna: " + j;}
+    let asiento = "ocupar reservado"
+      if (i; i = false and j; j=false);
+        window.alert("Este asiento esta oupado, seleccione el siguiente");
+      }else{
+        asiento = "reservado el asiento de la fila: " + i + "columna: " + j;
 
   return asiento;
 }
