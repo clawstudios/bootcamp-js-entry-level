@@ -1,4 +1,5 @@
-const total_de_asientos= 12;
+const total_de_asientos = 12;
+
 let asiento_vacio= [
   [true,true,true],
   [true,true,true],
@@ -34,15 +35,15 @@ function nextAvailable(){
 
   for (let i = 0; i< asiento_vacio.length;i++){
     let fila = asiento_vacio[i];
-    for (let j = 0; j< fila.length; j++){
-      let columna = fila [i];
-      let butaca = [i[j]];
-      if (butaca === true){
-      butaca = "su asiento "+ i + j + "ha sido reservado"}
-      else{
-        butaca = butaca++
-      }
-    }  
+      for (let j = 0; j< fila.length; j++){
+        let columna = fila [i];
+        let butaca = [i][j];
+          if (butaca === true){
+          let filaseleccionada = document.getElementsByClassName('row')[i];
+          let asientoseleccionado = filaseleccionada.getElementsByClassName('col - auto')[j];
+          asientoseleccionado.className='col-auto mx-2 fila_asiento--ocupado';
+          return 'reservado el asiento de la fila:'+ (i + 1) + 'columna:' + (j + 1);      }
+      }  
   }
 }
 
