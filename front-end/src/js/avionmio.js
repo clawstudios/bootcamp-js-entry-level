@@ -32,20 +32,24 @@ function isFullOfCapacity(){
 }
 
 function nextAvailable(){
-
-    for (let i = 0; i< asiento_vacio.length;i++){
-      let fila = asiento_vacio[i];
-        for (let j = 0; j< fila.length; j++){
-          let columna = fila [i];
-          let butaca = [i][j];
-            if (butaca === true){
-              let filaseleccionada = document.getElementsByClassName('row')[i];
-              let asientoseleccionado = filaseleccionada.getElementsByClassName('col - auto')[j];
-              asientoseleccionado.className='col-auto mx-2 fila_asiento--ocupado';
-              butaca [i][j] = false;
-              return 'reservado el asiento de la fila:'+ (i + 1) + 'columna:' + (j + 1);      }
-            } 
-    }  
+    if (isFullOfCapacity() === true){
+      return "no hay aseinto disponible"
+    }else{
+      for (let i = 0; i< asiento_vacio.length;i++){
+        let fila = asiento_vacio[i];
+          for (let j = 0; j< fila.length; j++){
+            let columna = fila [i];
+            let butaca = [i][j];
+              if (butaca === true){
+                let filaseleccionada = document.getElementsByClassName('row')[i];
+                let asientoseleccionado = filaseleccionada.getElementsByClassName('col - auto')[j];
+                asientoseleccionado.className='col-auto mx-2 fila_asiento--ocupado';
+                butaca [i][j] = false;
+                return 'reservado el asiento de la fila:'+ (i + 1) + 'columna:' + (j + 1);     
+              }
+          }
+      } 
+    } 
 }
 
 
