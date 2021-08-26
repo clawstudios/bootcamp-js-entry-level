@@ -1,41 +1,51 @@
 let reservados = 0;
 let asientos = [
-    [true, true,true]
-    [true, true,true]
-    [true, true,true]
+    [true, true,true],
+    [true, true,true],
+    [true, true,true],
     [true, true,true]
 ];
-
-let cantidad = asientos.length;
-
-function nextAvailable(){
-    let estadoAsiento = "No se encuentran asientos disponibles";
-    outer_loop:
-    for(let i = 0; i < cantidad; i++){
-        let columnas = asientos[i].length
-        for(let j = 0; j < columnas ; j++){
-
-            if(asientos[i][j]==true){
-                reservados = reservados + 1
-                asientos[i][j] = false;
-                estadoAsiento = 'Reserva el asiento de la fila: ' + i + 'columna: ' + j;
-                break outer_loop
+function countAvailable(){
+    let asientosOcupados = 0;
+    for(let i = 0; i < asientos.length; i++){
+        let fila = asientos[i]
+        for (let j = 0; j < fila.length; j++){
+            let asiento = fila[j];
+            if(asiento === true){
+                asientosOcupados = asientosOcupados + 1;
+                
             }
-
         }
     }
-}
-return estadoAsiento;
-
-function countAvailable(){
-    return "Hay " + reservados + " asientos reservados";
-    return "Hay " + (cantidad - reservados) + " asientos libres"; 
+    return asientosOcupados
 }
 
 function fullOfCapacity(){
-    if(asientos == reservados){
-        let Alerta = "No hay asientos disponibles";
-        alert(Alerta);
-        throw new Error (Alerta);
+    if(countAvailable() === 0){
+        window.alert("NO HAY MAS ASIENTOS");
+        return true;
+    }else{
+        return false;
     }
+
+}
+function nextAvailable(){
+    if (fullOfCapacity() === true){
+        return 'No hay asiento disponible'
+    } else {
+        for (let i = 0; i < asientos.length; i++){
+            let fila = asientos[i];
+            for (let j = 0; j < fila.length; j++){
+                let asiento = fila[j];
+                if (asiento === true){
+                    let filaSeleccionada = document.getElementsByClassName('row')[i];
+                    let asientoSeleccionado = filaSeleccionada.getElementsByClassName('col-auto')[j];
+                    asientoSeleccionado.className = 'col-auto mx-2 fila__asiento--ocupado';
+                    asientos[i][j] = false;
+                    return 'Reservo el asiento de la fila: ' + (i + 1) + ' columna: ' + (j + 1);
+            }
+
+        }
+    }    
+}
 }
