@@ -9,7 +9,25 @@
  * 
  */
 let btnPedir = document.querySelector('#btnPedir');
-let asientos = [
+let datoFormulario=document.querySelector ('#user-name');
+let datoUsuario=[];
+const maxi2 =()=>{
+    datoFormulario.push (datoUsuario);
+}
+console.log(datoUsuario);
+const button = document.querySelector('button');
+let guardarDatos= [];
+button.onclick = ()=> {
+    let name = prompt('¿Cuál es tu nombre y apellido?');
+    console.log(name);
+    let nacionalidad = prompt('¿Cuál es tu nacionalidad');
+    console.log(nacionalidad)
+    
+    guardarDatos.push (name);
+    guardarDatos.push (nacionalidad);
+    alert('¡Hola ' + name + ', encantado de verte!');
+  }
+  let asientos = [
     //[false,false,false],
     //[false,false,false],
     // [false,false,false]
@@ -62,3 +80,4 @@ let nextAvailable = () => {
         }
     }
 }
+console.log(guardarDatos);

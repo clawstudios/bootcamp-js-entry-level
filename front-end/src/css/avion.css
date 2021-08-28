@@ -1,7 +1,7 @@
 .fila__asiento--libre{
   background-color: rgba(10, 10, 10, 0.3);
   color : white;
-padding: 30px;
+padding: 10px;
 font-size: 25px;
 }
 
@@ -17,4 +17,18 @@ font-size: 25px;
  .d-grid {
   background-color: rgba(236, 240, 236, 0.3);
  }
+ label {
+  display: block;
+  font: 1rem 'Fira Sans', sans-serif;
+  color: red;
  
+}
+
+input,
+label {
+  margin: .1rem 0;
+  line-height: 5mm;
+  block-size: 20px;
+  margin-right: 0ch;
+  width: 0px;
+}
