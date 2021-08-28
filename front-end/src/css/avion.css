@@ -1,7 +1,11 @@
 .fila__asiento--libre{
   background-color: rgba(0, 200, 0, 0.3);
+  padding: 30px;
+  font-size: 25px;
 }
 
 .fila__asiento--ocupado{
-  background-color: rgba(200, 50, 0, 0.3);
+  background-color: rgb(255, 0, 0);
+  padding: 30px;
+  font-size: 25px;
 }
