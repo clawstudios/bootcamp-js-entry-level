@@ -8,25 +8,24 @@
  * pero si te encuentras bloqueado, no dudes en pedir ayuda.
  * 
  */
+let inputText = document.getElementById('name22').Value;
+console.log(inputText);
+
 let btnPedir = document.querySelector('#btnPedir');
-let datoFormulario=document.querySelector ('#user-name');
-let datoUsuario=[];
-const maxi2 =()=>{
-    datoFormulario.push (datoUsuario);
-}
-console.log(datoUsuario);
 const button = document.querySelector('button');
-let guardarDatos= [];
+let nombreApellido= [];
+let nacionalidad1= [];
 button.onclick = ()=> {
     let name = prompt('¿Cuál es tu nombre y apellido?');
-    console.log(name);
+   // console.log(name);
     let nacionalidad = prompt('¿Cuál es tu nacionalidad');
-    console.log(nacionalidad)
+   // console.log(nacionalidad)
     
-    guardarDatos.push (name);
-    guardarDatos.push (nacionalidad);
-    alert('¡Hola ' + name + ', encantado de verte!');
+    nombreApellido.push (name  );
+    nacionalidad1.push(nacionalidad);
+     alert('¡Hola ' + name + ', encantado de verte!');
   }
+
   let asientos = [
     //[false,false,false],
     //[false,false,false],
