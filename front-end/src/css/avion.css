@@ -1,10 +1,9 @@
 .fila__asiento--libre{
   background-color: rgba(10, 10, 10, 0.3);
   color : white;
-padding: 10px;
-font-size: 25px;
+  padding: 10px;
+  font-size: 25px;
 }
-
 .fila__asiento--ocupado{
   background-color: rgba(221, 12, 117, 0.3);
   color : blue;
@@ -21,9 +20,7 @@ font-size: 25px;
   display: block;
   font: 1rem 'Fira Sans', sans-serif;
   color: red;
- 
 }
-
 input,
 label {
   margin: .1rem 0;
