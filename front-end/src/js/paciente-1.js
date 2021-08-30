@@ -1,12 +1,11 @@
 
-class paciente {
-    constructor(apellido, nombre, sexo, OS, Glucosa) {
-        this.appellido = apellido;
-        this.nombre = nombre;
-        this.sexo = sexo;
-        this.OS = OS;
-        this.Glucosa = Glucosa;
-    }
+
+function paciente (apellido, nombre, sexo, OS, Glucosa){
+    this.appellido = apellido;
+    this.nombre = nombre;
+    this.sexo = sexo;
+    this.OS = OS;
+    this.Glucosa = Glucosa;
 };
     
     let Garcia = new paciente("Garcia", "Juan","M","Osde",89);
