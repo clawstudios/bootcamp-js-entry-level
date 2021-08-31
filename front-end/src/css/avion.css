@@ -1,7 +1,7 @@
 .fila__asiento--libre{
-  background-color: rgba(0, 200, 0, 0.3);
+  background-color: rgba(6, 255, 6, 0.3);
 }
 
 .fila__asiento--ocupado{
-  background-color: rgba(200, 50, 0, 0.3);
+  background-color: rgba(255, 6, 6, 0.3);
 }
