@@ -22,7 +22,7 @@ let reservados = 0;
 
  function fullOfCapacity(){
      if(countAvailable() === 0){
-         window.alert('NO HAY MAS ASIENTOS');
+         window.alert('NO HAY MAS ASIENTOS');  
          return true;
      }else{
          return false;
