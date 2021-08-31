@@ -2,7 +2,7 @@ const total_de_asientos = 12;
 
 let asiento_vacio= [
   [true,true,true],
-  [true,true,true],
+  [true,false,true],
   [true,true,true],
   [true,true,true],
 ];
