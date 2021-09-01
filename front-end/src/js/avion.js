@@ -8,30 +8,42 @@
  * pero si te encuentras bloqueado, no dudes en pedir ayuda.
  * 
  */
-let inputText = document.getElementById('name22').Value;
-console.log(inputText);
 
-let btnPedir = document.querySelector('#btnPedir');
-const button = document.querySelector('button');
-let nombreApellido= [];
-let nacionalidad1= [];
-button.onclick = ()=> {
-    let name = prompt('¿Cuál es tu nombre y apellido?');
+
+const btnPedir = document.querySelector('#btnPedir');
+//const button = document.querySelector('button');
+//let nombreApellido= [];
+//let nacionalidad1= [];
+//button.onclick = ()=> {
+ //   let name = prompt('¿Cuál es tu nombre y apellido?');
    // console.log(name);
-    let nacionalidad = prompt('¿Cuál es tu nacionalidad');
+  //  let nacionalidad = prompt('¿Cuál es tu nacionalidad');
    // console.log(nacionalidad)
     
-    nombreApellido.push (name  );
-    nacionalidad1.push(nacionalidad);
-     alert('¡Hola ' + name + ', encantado de verte!');
-  }
+ //   nombreApellido.push (name  );
+ //   nacionalidad1.push(nacionalidad);
+ //    alert('¡Hola ' + name + ', encantado de verte!');
+ // }
+ let getData = () => {
+    let name1 = document.getElementById("name1").value;
+    let age1 = document.getElementById("age1").value;
+    if (name1 == "" || age1 == "" ) {
+        window.alert('falta completar ');
+    } else {
+        console.log (name1 + "   " + age1);
+        clearData();
+    } //button.disabled=true;
+}
+//hacer funcion clear data;
+let clearData = () => {
+    document.getElementById("name1").value = " ";
+    document.getElementById("age1").value= " ";
+   };
 
   let asientos = [
     //[false,false,false],
     //[false,false,false],
     // [false,false,false]
-
-
     [true, true, true],
     [true, true, true],
     [true, true, true],
@@ -79,21 +91,21 @@ let nextAvailable = () => {
         }
     }
 }
-console.log(guardarDatos);
 
-function colorSeat(fila,columna){
-  //seleccionar el elemento contenedor de lo que me interesa
-  const avionContainer = document.getElementsByClassName('avion').item(0);
 
-  //seleccionar el elemento HTML que representa la fila de interes
-  const filas = avionContainer.children;
-  const filaSeleccionada = filas.item(fila);
+//function colorSeat(fila,columna){
+  ////seleccionar el elemento contenedor de lo que me interesa
+  //const avionContainer = document.getElementsByClassName('avion').item(0);
+
+ // //seleccionar el elemento HTML que representa la fila de interes
+ // const filas = avionContainer.children;
+ // const filaSeleccionada = filas.item(fila);
 
   //seleccionar el asiento de interes
-  const asientos = filaSeleccionada.children;
-  let asientoSeleccionado = asientos.item(columna);
-
+ // const asientos = filaSeleccionada.children;
+  //let asientoSeleccionado = asientos.item(columna);
+//
   //pintarlo como reservado
-  asientoSeleccionado.classList.remove('fila__asiento--libre');
-  asientoSeleccionado.classList.add('fila__asiento--ocupado');
-}
+ // asientoSeleccionado.classList.remove('fila__asiento--libre');
+ // asientoSeleccionado.classList.add('fila__asiento--ocupado');
+//}
