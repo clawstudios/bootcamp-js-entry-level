@@ -29,3 +29,21 @@ const matrixGenerator = function() {
 
   return patientMatrix;
 }
+
+function datosPacinete () {
+  let contadorMujeres = 0;
+  let pacientesDiabetes = [];
+  let osOSDE = [];
+    for (i = 0; i < PATIENT_COLUMNS.lenhth; i++) {
+      let infoPacientes = PATIENT_COLUMNS[i];
+        for (j = 0; j < infoPacientes.length; j++) {
+          let datosPacientes = infoPacientes[j];
+           if (pacient.sexo === 'F') {
+             contadorMujeres++;
+           }
+        }
+
+    }
+}
+
+console.log(datosPacinete());
