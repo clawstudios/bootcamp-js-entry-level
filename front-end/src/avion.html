@@ -18,7 +18,9 @@
           rel="stylesheet"
           integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
           crossorigin="anonymous">
-    <script src="./js/avionmio.js"></script>
+
+          <!-- esto no va aqui, porque se declara al final del body -->
+    <!-- <script src="./js/avionmio.js"></script> -->
   </head>
 
   <body>
@@ -49,21 +51,19 @@
 
     </section>
 
-
-
     <div class="d-flex flex-row justify-content-center">
       <div class="d-grid gap-2 col-6 mx-auto">
         <hr>
-<button onclick="nextAvailable()"
-        type="button"
-        class="btn btn-lg btn-outline-info shadow-none"> >Reservar asiento </button>
+        <button onclick="nextAvailable()"
+                type="button"
+                class="btn btn-lg btn-outline-info shadow-none"> >Reservar asiento </button>
       </div>
-
     </div>
 
     <!-- Bootstrap core JS-->
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- invocar a mi archivo JS que contiene la logica-->
     <script src="./js/avionmio.js"></script>
   </body>
 
