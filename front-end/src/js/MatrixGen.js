@@ -38,7 +38,7 @@ const  getData = () =>{
     let pacientesOS = [];
     let pacientesConDiabetes = [];
     for( let j = 0; j < info.length; j++) {
-      let paciente= info[j];
+      let paciente = info[j];
       if ( paciente.sexo === 'F' ) {
         contadorNumeroMujeres++;
       }

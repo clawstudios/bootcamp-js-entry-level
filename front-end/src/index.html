@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+       
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
@@ -17,6 +18,7 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
+        <div class="lds-ring loader " id="loader" ><div></div><div></div><div></div><div></div></div>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
@@ -31,7 +33,8 @@
         </header>
         <!-- Game List Section-->
         <section class="page-section game-list" id="game-list">
-            <div class="container">
+            <div     class="container">
+                
                 <!-- Game List Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Games list</h2>
                 <!-- Icon Divider-->
@@ -41,26 +44,10 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Game List Grid Items-->
-                <div class="row justify-content-center">
+                <div id="prueba-juego" class="row justify-content-center">
                     <!-- Item 1-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="game-list-item mx-auto">
-                            <div class="game-header">
-                                <h5>{{ title }}</h5>
-                            </div>
-                            <img class="img-fluid" src="{{thumbnail}}" alt="..." />
-                            <p class="game-item-description">{{short_description}}</p>
-                            <ul class="inline-list">
-                                <li><span class="badge badge-primary bg-badge">{{genre}}</span></li>
-                                <li><span class="badge badge-primary bg-badge">{{platform}}</span></li>
-                                <li><span class="badge badge-primary bg-badge">{{publisher}}</span></li>
-                                <li><span class="badge badge-primary bg-badge">{{developer}}</span></li>
-                            </ul>
-                            <a class="nav-link check-it-out-btn" href="{{game_url}}">Check it out!</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    
+        </div>
         </section>
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
