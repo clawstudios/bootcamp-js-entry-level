@@ -47,7 +47,7 @@
               </ul>
               <a class="nav-link check-it-out-btn" href="${games[i].game_url}">Check it out!</a>
           </div>`;
-      document.getElementById("gamer-grid").appendChild(item);
+      document.getElementById("game-grid").appendChild(item);
     }
   };
   listGames();
