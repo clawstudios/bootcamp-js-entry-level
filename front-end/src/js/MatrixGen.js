@@ -30,20 +30,35 @@ const matrixGenerator = function() {
   return patientMatrix;
 }
 
-function datosPacinete () {
-  let contadorMujeres = 0;
-  let pacientesDiabetes = [];
-  let osOSDE = [];
-    for (i = 0; i < PATIENT_COLUMNS.lenhth; i++) {
-      let infoPacientes = PATIENT_COLUMNS[i];
-        for (j = 0; j < infoPacientes.length; j++) {
-          let datosPacientes = infoPacientes[j];
-           if (pacient.sexo === 'F') {
-             contadorMujeres++;
-           }
+
+
+  let pacientes = matrixGenerator();
+  let cantidadMujeres = 0;
+  let pacientesOsde = [];
+  let pacienteDiabetes = [];
+   
+  for (i = 0; i < pacientes.length; i++) {    // datos (filas) lo tomo como los datos de los pacientes
+    
+    for (j =0; j < ; j++) {       //colunma los 3 años
+  
+      if (pacientes[0][i].sexo === 'F'){
+        cantidadMujeres++;
+      }
+        if (pacientes[i].OS === "OSDE") {
+         window.print(pacientesOsde[pacientes]);
         }
+        if (pacientes.glucosa >= 126) {
+          window.print(pacientes [nombre, ano]);
+      }
+    }  
+  }  
+  let totalPacientes = 10
+  let porcentajeMujeres = (100 * cantidadMujeres) / totalPacientes;
+    console.log("El porcentaje de mujeres es " + porcentajeMujeres);
+    
 
-    }
-}
 
-console.log(datosPacinete());
+console.log(cantidadMujeres);
+console.log(pacientesOsde);
+console.log(pacienteDiabetes);
+
