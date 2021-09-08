@@ -8,6 +8,25 @@
  * pero si te encuentras bloqueado, no dudes en pedir ayuda.
  *
  */ 
+const showLoader = () =>{
+  let loader = document.createElement('div');
+  loader.className = 'loader';
+  loader.innerHTML = '<div class="lds-ripple"><div></div><div></div></div>';
+  document.body.prepend(loader);
+}
+const hideLoader = () => {
+  document.getElementsByClassName('loader')[0].remove();
+}
+const fondoTrans = () => {
+  let fondo = document.createElement('div')
+  fondo.className = 'fondo.trans'
+  fondo.innerHTML = '<div class="fondo-trans"></div>'
+  document.body.prepend(fondo);
+}
+const fondoClean = () => {
+  document.getElementsByClassName('fondo.trans')[0].remove();
+}
+
  const getGames = async () => {
     let respuestaAPI = await fetch(
       "https://free-to-play-games-database.p.rapidapi.com/api/games",
@@ -20,7 +39,10 @@
       }
     );
     let body = await respuestaAPI.json();
+    hideLoader()
+    //fondoClean()
     return body;
+    
   };
   const getJuegos = async () => {
     let Juegos = await getGames();
@@ -29,6 +51,7 @@
     }
   };
   const listGames = async () => {
+    
     let games = await getGames();
     for (let i = 0; i < games.length; i++) {
       let item = document.createElement("div");
