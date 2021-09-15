@@ -16,6 +16,8 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/Biblioteca.css" rel="stylesheet" />
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/e674071211.js" crossorigin="anonymous"></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -23,22 +25,18 @@
         <div class="loader">
             <div class="lds-ripple"><div></div><div></div></div>
             <div class="fondo-trans"></div>
-        <!-- Paginacion-->
-        <div class="pagination">
-            <a href="#">&laquo;</a>
-            <a href="#">1</a>
-            <a class="active" href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-            <a href="#">6</a>
-            <a href="#">&raquo;</a>
-          </div>
         </div>
-        </div>
+        <!--Buscador-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand" href="#page-top">GameDir</a>
+                <div id="ctn-bars-search">
+                    <input type="text" id="inputSearch" class="form-control my-2" placeholder="Buscar">
+                    <button class="btn btn-info mb-2" id="boton">Buscar juego</button>
+                    <ul id="resultado">
+                        <li></li>
+                    </ul>
+                </div> 
             </div>
         </nav>
         <!-- Welcome -->
@@ -47,6 +45,11 @@
                 <p class="masthead-subheading font-weight-light mb-0">All the info you need about every video game in only one place.</p>
             </div>
         </header>
+        <!--<ul id="box-search">
+            <li><a href="#"><i class="fas fa-search"></i>Prueba</a></li>
+        </ul>
+        <div id="cover-ctn-search"></div>-->
+
         <!-- Game List Section-->
         <section class="page-section game-list" id="game-list">
             <div class="container">
@@ -60,10 +63,12 @@
                 </div>
                 <!-- Game List Grid Items-->
                 <div class="row justify-content-center" id="gamer-grid"> 
-                    <!-- Item 1-->
-                    
+                </div>
+                <!-- Paginacion-->
+                <div class="pagination"id="pagination-id">
                 </div>
             </div>
+
         </section>
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
