@@ -4677,7 +4677,7 @@ textarea.form-control-lg {
 }
 
 .pagination-lg .page-link {
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 0.8rem;
   font-size: 1.25rem;
 }
 .pagination-lg .page-item:first-child .page-link {

@@ -16,14 +16,23 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="./css/loader.css" rel="stylesheet" />
     </head>
     <body id="page-top">
-        <div class="lds-ring loader " id="loader" ><div></div><div></div><div></div><div></div></div>
+        <div   class="container">
+         <div id="loader"></div>
+        </div>
+        
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand" href="#page-top">GameDir</a>
+                 <form> 
+                 <input type="text" name="buscarJuego" id="buscarJuego1" placeholder="busqueda"><br>
+                <button type="button" id="button" onclick="botonFiltro()" > buscar</button>
+                </form>
             </div>
+        
         </nav>
         <!-- Welcome -->
         <header class="masthead bg-primary text-white text-center">
@@ -34,7 +43,7 @@
         <!-- Game List Section-->
         <section class="page-section game-list" id="game-list">
             <div     class="container">
-                
+              <div id= "categorias"></div>
                 <!-- Game List Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Games list</h2>
                 <!-- Icon Divider-->
@@ -44,9 +53,12 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Game List Grid Items-->
-                <div id="prueba-juego" class="row justify-content-center">
+                <div id="prueba-juego" class="row justify-content-center"> 
+                </div>
                     <!-- Item 1-->
-                    
+                    <div id="pagination-grid" class="pagination pagination-lg"></div>
+                    <ul class="pagination pagination-lg">
+                      </ul>
         </div>
         </section>
         <!-- Copyright Section-->

@@ -1,0 +1,38 @@
+const botonFiltro =  async () => {// poner boton a la derecha cuuando con minuscula que ande y cuando pongo dos letras tambien//
+    let arrayJuegos = await getGames();
+    let busqUsr = document.getElementById('buscarJuego1').value;
+    let result = arrayJuegos.filter((juego) => {
+       return juego.title === busqUsr
+    });
+    document.getElementById('buscarJuego1').value="";
+    console.log('prueba1',result);
+    console.log('busqeda',busqUsr)
+    if (result === busqUsr) {
+        window.alert('no existe');
+    }else {
+    (result.length < 1) 
+        //falta agregar alert
+//for (let i = 0; i < result.length; i++) {
+            let NuevaCreacion = document.getElementById('prueba-juego');
+            NuevaCreacion.className = 'col-md-6 col-lg-4 mb-5';
+            NuevaCreacion.innerHTML = `
+            <div class="game-list-item mx-auto">
+            <div class="game-header">
+            <h5>${result[0].title}</h5>
+            </div>
+            <img class="img-fluid" src="${result[0].thumbnail}" alt="..." />
+            <p class="game-item-description">${result[0].short_description}</p>
+            <ul class="inline-list">
+            <li><span class="badge badge-primary bg-badge">${result[0].genre}</span></li>
+            <li><span class="badge badge-primary bg-badge">${result[0].platform}</span></li>
+            <li><span class="badge badge-primary bg-badge">${result[0].publisher}</span></li>
+            <li><span class="badge badge-primary bg-badge">${result[0].developer}</span></li>
+            </ul>
+            <a class="nav-link check-it-out-btn" href="${result[0].game_url}">Check it out!</a>
+            </div>
+            `;
+            document.getElementById('prueba-juego').appendChild(NuevaCreacion);
+        
+    
+    };
+};
